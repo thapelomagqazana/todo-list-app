@@ -10,8 +10,12 @@
             {% for task in tasks %}
                 <li class="task-block">
                     {{ task.title }}
-                    <a href="{% url 'delete_task' task.id %}">Delete</a>
+                    <!-- <a href="{% url 'delete_task' task.id %}">Delete</a> -->
                 </li>
+                <div class="task-details">
+                    <p>Description: {{ task.description }}</p>
+                    <p>Created At: {{ task.created_at }}</p>
+                </div>
             {% endfor %}
         </ul>
         {% else %}
