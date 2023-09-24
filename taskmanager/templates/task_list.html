@@ -8,7 +8,7 @@
         {% if tasks %}
         <ul>
             {% for task in tasks %}
-                <li>
+                <li class="task-block">
                     {{ task.title }}
                     <a href="{% url 'delete_task' task.id %}">Delete</a>
                 </li>

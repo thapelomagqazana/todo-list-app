@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
         <script src="{% static 'js/script.js' %}"></script>
         <title>{% block title %}My Project{% endblock %}</title>
     </head>
@@ -14,7 +14,7 @@
             </div>
             <nav>
                 <ul>
-                    <li>Home</li>
+                    <li><a href="{% url 'task_list' %}">Home</a></li>
                     <li>About</li>
                     <li>Services</li>
                     <li>Contact</li>
