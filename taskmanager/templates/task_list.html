@@ -1,20 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>To-Do List - Task List</title>
-    </head>
-    <body>
-        <h1>Task List</h1>
+{% extends 'base.html' %}
+
+{% block title %}To-Do List - Task List{% endblock %}
+
+{% block content %}
+    <h1>Task List</h1>
+    <div id="main">
+        {% if tasks %}
         <ul>
             {% for task in tasks %}
                 <li>
                     {{ task.title }}
-                    <a href="{% url 'delete_task' task.id %}"></a>
+                    <a href="{% url 'delete_task' task.id %}">Delete</a>
                 </li>
             {% endfor %}
         </ul>
+        {% else %}
+        <p>No tasks added</p>
+        {% endif %}
         <a href="{% url 'add_task' %}">Add Task</a>
-    </body>
-</html>
+    </div>
+{% endblock %}
