@@ -4,10 +4,10 @@
 
 {% block content %}
     <h1>Edit Task</h1>
-    <form method="post">
+    <form name="taskForm" onsubmit="return validateForm()" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Add</button>
+        <input type="submit" value="Submit">
     </form>
     <a href="{% url 'task_list' %}">Back to Task List</a>
 {% endblock %}
