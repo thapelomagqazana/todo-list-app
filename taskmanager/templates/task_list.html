@@ -8,14 +8,29 @@
         {% if tasks %}
         <ul>
             {% for task in tasks %}
-                <li class="task-block">
-                    {{ task.title }}
-                    <!-- <a href="{% url 'delete_task' task.id %}">Delete</a> -->
-                </li>
-                <div class="task-details">
-                    <p>Description: {{ task.description }}</p>
-                    <p>Created At: {{ task.created_at }}</p>
+            <div class="task-item">
+                <div class="task-content">
+                    <h3>{{ task.title }}</h3>
+                    <div class="task-details">
+                        <p>Description: {{ task.description }}</p>
+                        <p>Created At: {{ task.created_at }}</p>
+                        <div class="task-options">
+                            <a href="#">Edit</a>
+                            <a href="{% url 'delete_task' task.id %}">Delete</a>
+                            <!-- <span class="options-icon">Options</span>
+                            <div class="options-menu">
+                                <a href="{% url 'delete_task' task.id %}">Delete</a>
+                            </div> -->
+                        </div>
+                    </div>
+                    
                 </div>
+
+            </div>
+                <!-- <li class="task-block">
+                    {{ task.title }}
+                </li> -->
+                
             {% endfor %}
         </ul>
         {% else %}

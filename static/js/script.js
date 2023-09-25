@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    $(".task-block").click(function(){
-        $(this).next(".task-details").slideToggle();
+    // Toggle task details on click
+    $(".task-item").click(function(){
+        $(this).find(".task-details").slideToggle();
     });
 });

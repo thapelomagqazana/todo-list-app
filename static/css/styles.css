@@ -1,3 +1,14 @@
+
+:root{
+    --font-family: 'Arial', sans-serif;
+    --root-font-size: 16px;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--root-font-size);
+}
+
 header{
     display: flex;
     align-items: center;
@@ -25,9 +36,73 @@ nav a {
     color: #fff;
 }
 
-.task-block {
+.task-item {
+    width: 680px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.task-item:hover{
+    border: 2px solid;
+    border-color: red;
+}
+
+.task-content {
+    width: 100%;
+    
+}
+
+.task-details {
+    display: none;
+}
+
+.task-options a {
+    display: inline;
+    margin-right: 10px;
+    color: #007bff;
+}
+
+.task-options a:hover{
+    color: red;
+    cursor: pointer;
+}
+
+/* @media (max-width: 768px){
+    .task-item{
+        width: 100%;
+    }
+} */
+
+/* .options-icon {
+    color: #007bff;
+}
+
+.options-icon:hover {
+    cursor: pointer;
+    color:red;
+
+}
+
+.options-menu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    right: 0;
+}
+
+.options-menu a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+} */
+
+/* .task-block {
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px 0;
     cursor: pointer;
-}
+} */
