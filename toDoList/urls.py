@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from taskmanager import views
+from django.conf.urls import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,3 +26,7 @@ urlpatterns = [
     path("delete/<int:task_id>/", views.delete_task, name="delete_task"),
     path("edit_task/<int:task_id>/", views.edit_task, name="edit_task"),
 ]
+
+
+# # Configure the custom 404 view
+# handler404 = "taskmanager.views.custom_404_view"
