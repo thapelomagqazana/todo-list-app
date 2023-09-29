@@ -37,6 +37,49 @@ nav {
     margin-left: 60px;
 }
 
+nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li{
+    display: inline;
+    margin-right: 60px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+nav a {
+    text-decoration: none;
+    color: #B9F263;
+    /* color: #fff; */
+}
+
+/* Add styling for the search input */
+header .search {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push the search input to the right */
+}
+
+header .search input[type="text"]{
+    padding: 5px;
+    border: 1px solid #B9F263;
+    border-radius: 5px;
+}
+
+header .search button[type="submit"]{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Add additional styling for the search icon (Font Awesome) */
+header .search button[type="submit"] i.fa {
+    font-size: 18px;
+    color: #B9F263
+}
+
 #title {
     font-family: 'Pixelify Sans', cursive;
 }
@@ -52,27 +95,12 @@ main {
     margin-right: 20px;
 }
 
-nav ul{
-    list-style-type: none;
-    padding: 0;
-}
 
 footer ul {
     list-style-type: none;
 }
 
-nav li{
-    display: inline;
-    margin-right: 60px;
-    font-size: 2rem;
-    font-weight: 700;
-}
 
-nav a {
-    text-decoration: none;
-    color: #B9F263;
-    /* color: #fff; */
-}
 
 .task-item {
     width: 680px;
@@ -99,7 +127,11 @@ nav a {
 
 .task-details {
     display: none;
-    background-color: #9BA8F2;
+    background-color: #CDFF82;
+}
+
+.task-details p {
+    color: grey;
 }
 
 .task-options a {
