@@ -31,6 +31,7 @@ header, footer{
 footer {
     justify-content: center;
     text-align: center;
+    background-color: #253837; 
 }
 
 nav {
@@ -55,11 +56,23 @@ nav a {
     /* color: #fff; */
 }
 
+/* Add styling to keep the nav fixed at the top */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    height: 100px;
+    background-color: #253837; 
+}
+
 /* Add styling for the search input */
 header .search {
     display: flex;
     align-items: center;
     margin-left: auto; /* Push the search input to the right */
+    padding-right: 20px;
 }
 
 header .search input[type="text"]{
@@ -88,6 +101,7 @@ main {
     display: flex;
     justify-content: center;
     margin: 10px;
+    margin-top: 10%;
     text-align: center;
 }
 
@@ -144,41 +158,3 @@ footer ul {
     color: red;
     cursor: pointer;
 }
-
-/* @media (max-width: 768px){
-    .task-item{
-        width: 100%;
-    }
-} */
-
-/* .options-icon {
-    color: #007bff;
-}
-
-.options-icon:hover {
-    cursor: pointer;
-    color:red;
-
-}
-
-.options-menu {
-    display: none;
-    position: absolute;
-    background: #fff;
-    border: 1px solid #ccc;
-    padding: 5px;
-    right: 0;
-}
-
-.options-menu a {
-    display: block;
-    text-decoration: none;
-    color: #333;
-} */
-
-/* .task-block {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px 0;
-    cursor: pointer;
-} */
