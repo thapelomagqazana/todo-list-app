@@ -15,8 +15,17 @@ header{
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: #5E75F2;
-    color: #E9EBF2;
+    background-color: #2A403E;
+    color: #B9F263;
+    
+}
+
+nav {
+    margin-left: 60px;
+}
+
+#title {
+    font-family: 'Pixelify Sans', cursive;
 }
 
 main {
@@ -41,7 +50,8 @@ nav li{
 
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: #B9F263;
+    /* color: #fff; */
 }
 
 .task-item {
