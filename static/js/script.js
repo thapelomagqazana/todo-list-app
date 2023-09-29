@@ -1,6 +1,13 @@
 $(document).ready(function(){
+    // Initially hide all task details
+    $(".task-details").hide();
+
     // Toggle task details on click
     $(".task-item").click(function(){
+        // Slide up any open task details except the one in the clicked task item
+        $(".task-details").not($(this).find(".task-details")).slideUp();
+
+        // Slide toggle the task details in the clicked task item
         $(this).find(".task-details").slideToggle();
     });
 });
