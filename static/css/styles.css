@@ -17,18 +17,18 @@ body {
 }
 
 header {
+    border-bottom: 1px dotted;
     align-items: center;
 }
 
 header, footer{
     display: flex;
-    border-top: 1px dotted;
-    border-bottom: 1px dotted;
     padding: 10px;
     color: #B9F263;   
 }
 
 footer {
+    border-top: 1px dotted;
     justify-content: center;
     text-align: center;
     background-color: #253837; 
@@ -185,6 +185,40 @@ footer ul {
     color: #fff;
     font-size: 24px;
 }
+
+/* Media query for screens with a maximum width of 768px (typical tablet size) */
+@media (max-width: 768px){
+    /* Adjust styling for smaller screens */
+    header {
+        padding: 5px;
+    }
+
+    nav {
+        flex-direction: column; /* Stack nav items vertically on smaller screens */
+        text-align: center; /* Center-align nav items */
+    }
+
+    nav .search {
+        margin-top: 10px;
+    }
+}
+
+/* Media query for screens with a maximum width of 480px (typical mobile size) */
+@media (max-width: 480px) {
+    /* Further adjust styling for even smaller screens */
+    header {
+        padding: 3px;
+    }
+
+    nav {
+        font-size: 14px; /* Reduce font size for readability */
+    }
+
+    nav .search {
+        margin-top: 5px;
+    }
+}
+
 
 /* .add-task-icon .add-text{
     display: none;
