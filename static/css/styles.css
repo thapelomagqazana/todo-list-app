@@ -2,22 +2,34 @@
 :root{
     --font-family: 'Roboto', sans-serif;
     --root-font-size: 16px;
+    --page-background-color: #2A403E;
 }
+
+
 
 body {
     font-family: var(--font-family);
     font-size: var(--root-font-size);
+    background-color: var(--page-background-color);
     margin: 0;
-    background-color: #BDC7FF;
+    padding: 0;
 }
 
-header{
-    display: flex;
+header {
     align-items: center;
+}
+
+header, footer{
+    display: flex;
+    border-top: 1px dotted;
+    border-bottom: 1px dotted;
     padding: 10px;
-    background-color: #2A403E;
-    color: #B9F263;
-    
+    color: #B9F263;   
+}
+
+footer {
+    justify-content: center;
+    text-align: center;
 }
 
 nav {
@@ -29,7 +41,10 @@ nav {
 }
 
 main {
+    display: flex;
+    justify-content: center;
     margin: 10px;
+    text-align: center;
 }
 
 #logo img{
@@ -39,6 +54,10 @@ main {
 nav ul{
     list-style-type: none;
     padding: 0;
+}
+
+footer ul {
+    list-style-type: none;
 }
 
 nav li{
